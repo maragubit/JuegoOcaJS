@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Juego de la Oca Ilerna</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!--Jquery-->
+        <script src="statics/jquery3.7.1.min.js"></script>
+        
+        <!--Mis archivos-->
+        <link rel="stylesheet" href="statics/estilos.css">
+        <script src="statics/scripts.js"></script>
+        
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>
+    <audio id="sonidoDado" src="statics/dice.mp3"></audio>
+    <audio id="sonidoOca" src="statics/oca.mp3"></audio>
+    <audio id="sonidoPuente" src="statics/puente.mp3"></audio>
+    <audio id="sonidoAplauso" src="statics/aplauso.mp3"></audio>
+        <br>
+        <h1>Juego de la Oca Ilerna</h1>
+        <hr>
+        <div class="partida" style="display:none">
+            <div class="container"> <!-- Utilizo Framework CSS Bootstrap para mejorar la experiencia del usuario -->
+                
+                <div class="row"> <!--Fila donde incorporo mi contenido en 2 columnas si son dispositivos large (col-lg-8) la primera ocupa 8/12 partes -->
+                    
+                    <div class="col-lg-8"> <!-- Columna que contiene la imagen de fondo del tablero y las fichas-->
+                        <div id="ganadores"></div><!--Aparece al finalizar la partida -->
+                        <div class="tablero">
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4"> <!--Columna que contiene la tabla con los datos de la partida -->
+                        <table id="datosJugadores">
+                            <tr>
+                                <th>Jugador</th> <th>Ficha</th> <th>Casilla</th> <th>Tirar dado</th>
+                            </tr> 
+                        </table>
+                        
+                        <div class="dado"> <!--Colocamos el dado debajo de la tabla --->
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="iniciarPartida" style="display:block">
+        <!--Formulario con los datos para comenzar la partida-->
+            <h2> Inicio de partida</h2>
+                <div id="formNumJugadores">
+                    <label for="seleccionJugador">Seleccione el numero de jugadores</label>
+                    <select id="seleccionJugador">
+                        <option value=2>2 Jugadores</option>
+                        <option value=3>3 Jugadores</option>
+                        <option value=4>4 Jugadores</option>
+                    </select>
+                    <button class="btn btn-dark" id="numeroJugadores" onclick="numJugadores()">Enviar</button>
+                </div>
+        <!--Formulario para customizar jugadores -->
+                <div id="formJugadores" style="display:none">
+                    <span id="contenidoForm">
+                    </span>
+                    <button class="btn btn-dark" onclick="comenzarPartida()">Comenzar partida</button>
+                </div>
+        </div>
+        
+    </body>
+</html>

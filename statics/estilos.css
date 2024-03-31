@@ -1,0 +1,122 @@
+h1 {
+    text-align:center;
+}
+
+.tablero {
+    width: 700px;
+    height: 600px;
+    text-align: center;
+    background-image: url("tablero.jpg");
+    background-repeat: no-repeat;
+    background-size: 700px 600px;
+    position: static;
+    
+}
+.col-lg-4 table{
+    width: 100%;
+}
+
+.iniciarPartida{
+    padding-left: 5%;
+
+}
+
+label {
+    padding:1%;
+}
+fieldset {
+    background-color:#eeeef5;
+}
+
+.dado {
+    width: 205px;
+    height: 205px;
+    background-image: url("dado1.png");
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    position: absolute;
+    left: 20%;
+}
+
+
+/* --------------------------------------------------------- */
+
+
+/* TIPOS DE FIGURAS */
+.circulo {
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%;
+}
+
+
+
+
+
+.cuadrado{
+    width: 15px; 
+    height: 15px;
+}
+
+.circulo{
+    width: 15px; 
+    height: 15px;
+    border-radius: 50%;
+}
+
+.triangulo{
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent; 
+    border-right: 8px solid transparent;
+    border-bottom: 16px solid;
+}
+
+.gato{
+    background-image: url("gato.png");
+    width: 20px; 
+    height: 15px;
+    background-repeat: no-repeat;
+}
+
+
+.perro{
+    background-image: url("perro.png");
+    width: 20px; 
+    height: 15px;
+    background-repeat: no-repeat;
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* CSS JUGADORES */
+
+
+#jugador1{
+    position: absolute; /*posicion referente al tablero*/
+    left:52px; /* coordenadas X */
+    bottom: 71px; /* coordenadas Y */
+    
+}
+
+
+#jugador2{
+    position: absolute; /*posicion referente al tablero*/
+    left:52px; /* coordenadas X */
+    bottom: 56px; /* coordenadas Y */
+    
+}
+
+#jugador3{
+    position: absolute; /*posicion referente al tablero*/
+    left:52px; /* coordenadas X */
+    bottom: 41px; /* coordenadas Y */
+    
+}
+
+#jugador4{
+    position: absolute; /*posicion referente al tablero*/
+    left:52px; /* coordenadas X */
+    bottom: 26px; /* coordenadas Y */
+}
