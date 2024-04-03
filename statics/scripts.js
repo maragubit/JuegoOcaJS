@@ -755,7 +755,7 @@ function siguienteJugador(player){
     }
 }
 
-function finPartida(){
+function finPartida(){ //se activa en la funcion siguiente jugador, cuando todos los jugadores tienen su propiedad partida como false.
     $(".tablero").hide();
     let ganadores=document.getElementById("ganadores");
     var divFinal=document.createElement("ol");
@@ -767,3 +767,18 @@ function finPartida(){
     }
     ganadores.appendChild(divFinal);
 }
+
+function reset(){
+
+      for (let i =0;i<window.jugadoresList.length;i++){
+        window.jugadoresList[i].tramo=1;
+        window.jugadoresList[i].casilla=0;
+        let jugadorDiv=document.getElementById("jugador"+(i+1));
+        jugadorDiv.style.left="52px";
+        jugadorDiv.style.bottom=71-window.jugadoresList[i].difAltura+"px";
+        let datocasilla=document.getElementById("datoCasilla"+(i+1));
+        datocasilla.innerHTML="0";
+
+      }
+      tirarDados(1);
+    }
